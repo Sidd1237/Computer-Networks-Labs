@@ -18,8 +18,9 @@ int main()
     }
     printf("Server Socket Created\n");
     /*CONSTRUCT LOCAL ADDRESS STRUCTURE*/
-    struct sockaddr_in serverAddress, clientAddress;
-    memset(&serverAddress, 0, sizeof(serverAddress));
+    struct sockaddr_in serverAddress = {};
+    struct sockaddr_in clientAddress = {};
+    //memset(&serverAddress, 0, sizeof(serverAddress));
     serverAddress.sin_family = AF_INET;
     serverAddress.sin_port = htons(5000);
     serverAddress.sin_addr.s_addr = htonl(INADDR_ANY);

@@ -18,8 +18,8 @@ int main(int argc, char const *argv[])
     printf("Client Socket Created\n");
 
     // creating server address structure
-    struct sockaddr_in serverAddr;
-    memset(&serverAddr, 0, sizeof(serverAddr));
+    struct sockaddr_in serverAddr = {};
+    //memset(&serverAddr, 0, sizeof(serverAddr));
 
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_port = htons(5000);
